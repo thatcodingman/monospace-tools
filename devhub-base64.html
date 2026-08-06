@@ -3,6 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<script>
+(function(){
+  try {
+    var saved = localStorage.getItem("monospace-theme");
+    var theme = saved || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+    document.documentElement.setAttribute("data-theme", theme);
+  } catch (e) {}
+})();
+</script>
 <title>Base64 Encode & Decode — monospace</title>
 <meta name="description" content="Encode text to Base64 or decode Base64 back to text, with full Unicode support. Runs entirely in your browser.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,6 +26,7 @@
     <a href="index.html">All tools</a>
     <a href="devhub-about.html">About</a>
     <a href="devhub-faq.html">FAQ</a>
+  <button id="themeToggle" class="theme-toggle" aria-label="Switch to dark theme">Dark</button>
   </nav>
 </header>
 
@@ -58,11 +68,12 @@
       <a href="devhub-contact.html">Contact</a>
       <a href="devhub-terms.html">Terms</a>
       <a href="devhub-privacy.html">Privacy</a>
-    </nav>
+  </nav>
     <p>© 2026 monospace</p>
   </div>
 </footer>
 
 <script src="devhub-app.js"></script>
+<script src="devhub-theme.js"></script>
 </body>
 </html>

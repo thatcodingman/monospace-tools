@@ -3,6 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<script>
+(function(){
+  try {
+    var saved = localStorage.getItem("monospace-theme");
+    var theme = saved || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+    document.documentElement.setAttribute("data-theme", theme);
+  } catch (e) {}
+})();
+</script>
 <meta name="google-adsense-account" content="ca-pub-8828337552440063">
 <title>Monospace — JSON formatter, Base64, regex tester, UUID generator</title>
 <meta name="description" content="Four fast developer tools that run entirely in your browser: JSON formatter, Base64 encoder/decoder, regex tester, and UUID generator. No signup, nothing uploaded.">
@@ -19,6 +28,7 @@
     <a href="devhub-about.html">About</a>
     <a href="devhub-faq.html">FAQ</a>
     <a href="devhub-contact.html">Contact</a>
+  <button id="themeToggle" class="theme-toggle" aria-label="Switch to dark theme">Dark</button>
   </nav>
 </header>
 
@@ -65,10 +75,11 @@
       <a href="devhub-contact.html">Contact</a>
       <a href="devhub-terms.html">Terms</a>
       <a href="devhub-privacy.html">Privacy</a>
-    </nav>
+  </nav>
     <p>© 2026 monospace — everything above runs in your browser.</p>
   </div>
 </footer>
 
+<script src="devhub-theme.js"></script>
 </body>
 </html>

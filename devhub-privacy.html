@@ -3,6 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<script>
+(function(){
+  try {
+    var saved = localStorage.getItem("monospace-theme");
+    var theme = saved || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+    document.documentElement.setAttribute("data-theme", theme);
+  } catch (e) {}
+})();
+</script>
 <title>Privacy Policy — monospace</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Source+Sans+3:wght@400;500&display=swap" rel="stylesheet">
@@ -15,6 +24,7 @@
   <nav class="nav-links">
     <a href="index.html">All tools</a>
     <a href="devhub-terms.html">Terms</a>
+  <button id="themeToggle" class="theme-toggle" aria-label="Switch to dark theme">Dark</button>
   </nav>
 </header>
 
@@ -56,10 +66,11 @@
       <a href="devhub-contact.html">Contact</a>
       <a href="devhub-terms.html">Terms</a>
       <a href="devhub-privacy.html">Privacy</a>
-    </nav>
+  </nav>
     <p>© 2026 monospace</p>
   </div>
 </footer>
 
+<script src="devhub-theme.js"></script>
 </body>
 </html>
