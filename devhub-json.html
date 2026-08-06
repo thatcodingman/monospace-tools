@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>JSON Formatter & Validator — monospace</title>
+<meta name="description" content="Format, minify, and validate JSON online. Clear error messages when something's wrong. Runs entirely in your browser.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Source+Sans+3:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="devhub-styles.css">
+</head>
+<body>
+
+<header class="nav">
+  <a href="index.html" class="wordmark">monospace<span class="cursor"></span></a>
+  <nav class="nav-links">
+    <a href="index.html">All tools</a>
+    <a href="devhub-about.html">About</a>
+    <a href="devhub-faq.html">FAQ</a>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <p class="eyebrow">JSON</p>
+    <h1>JSON Formatter & Validator</h1>
+    <p class="lead">Paste JSON in, format it, minify it, or find out exactly what's broken.</p>
+  </section>
+
+  <div class="term-window">
+    <div class="term-bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="term-title">input.json</span></div>
+    <div class="term-body">
+      <label class="field-label" for="jsonInput">Paste JSON</label>
+      <textarea id="jsonInput" spellcheck="false" placeholder='{"example": "paste your JSON here"}'></textarea>
+
+      <div class="field-row" style="margin-top:16px;">
+        <div>
+          <label class="field-label" for="jsonIndent">Indent</label>
+          <select id="jsonIndent">
+            <option value="2" selected>2 spaces</option>
+            <option value="4">4 spaces</option>
+            <option value="tab">Tab</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="btn-row">
+        <button class="primary" id="jsonFormatBtn">Format</button>
+        <button class="secondary" id="jsonMinifyBtn">Minify</button>
+        <button class="secondary" id="jsonCopyBtn">Copy output</button>
+        <button class="secondary" id="jsonClearBtn">Clear</button>
+      </div>
+
+      <div class="status-row" id="jsonStatus"></div>
+
+      <label class="field-label">Output</label>
+      <div class="output-box" id="jsonOutput"></div>
+    </div>
+  </div>
+
+  <p class="tool-note">Nothing you paste here is uploaded — parsing and formatting happen entirely in your browser using the native JSON engine.</p>
+</main>
+
+<footer>
+  <div class="foot-inner">
+    <nav>
+      <a href="devhub-about.html">About</a>
+      <a href="devhub-faq.html">FAQ</a>
+      <a href="devhub-contact.html">Contact</a>
+      <a href="devhub-terms.html">Terms</a>
+      <a href="devhub-privacy.html">Privacy</a>
+    </nav>
+    <p>© 2026 monospace</p>
+  </div>
+</footer>
+
+<script src="devhub-app.js"></script>
+</body>
+</html>

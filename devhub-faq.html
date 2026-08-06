@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FAQ — monospace</title>
+<meta name="description" content="Answers about the JSON formatter, Base64 tool, regex tester, and UUID generator.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Source+Sans+3:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="devhub-styles.css">
+</head>
+<body>
+
+<header class="nav">
+  <a href="index.html" class="wordmark">monospace<span class="cursor"></span></a>
+  <nav class="nav-links">
+    <a href="index.html">All tools</a>
+    <a href="devhub-about.html">About</a>
+    <a href="devhub-contact.html">Contact</a>
+  </nav>
+</header>
+
+<main>
+  <div class="legal">
+    <h1>Frequently asked questions</h1>
+    <p class="updated">JSON, Base64, regex, and UUIDs</p>
+
+    <details class="faq-item" open>
+      <summary>Is any of my data uploaded or stored?</summary>
+      <p>No. Every tool runs entirely in your browser using built-in engines — nothing you paste, format, encode, or generate is ever sent to a server. See the <a href="devhub-privacy.html">Privacy Policy</a> for the full explanation.</p>
+    </details>
+
+    <details class="faq-item">
+      <summary>Why does the JSON formatter say my JSON is invalid when it looks fine?</summary>
+      <p>Common causes: a trailing comma after the last item in an object or array (valid in JavaScript, not valid in JSON), single quotes instead of double quotes, or an unquoted key. The error message includes the exact position where parsing failed — that's usually the fastest way to spot it.</p>
+    </details>
+
+    <details class="faq-item">
+      <summary>Does the Base64 tool handle emoji and non-English text?</summary>
+      <p>Yes. It correctly encodes and decodes full Unicode text, including emoji, accented characters, and non-Latin scripts — not just plain ASCII, which trips up some simpler Base64 tools.</p>
+    </details>
+
+    <details class="faq-item">
+      <summary>What do the regex flags mean?</summary>
+      <p><code>g</code> finds all matches instead of stopping at the first one, <code>i</code> makes matching case-insensitive, <code>m</code> makes <code>^</code> and <code>$</code> match the start/end of each line instead of the whole string, and <code>s</code> lets <code>.</code> match newline characters too. The tester always shows every match regardless of whether you include <code>g</code>, since that's the more useful default for testing.</p>
+    </details>
+
+    <details class="faq-item">
+      <summary>Why did my regex pattern with a star (like <code>x*</code>) show unexpected results elsewhere?</summary>
+      <p>Patterns that can match an empty string are a classic source of subtle bugs in hand-written regex loops — many implementations either infinite-loop or produce garbage output on them. This tool specifically handles that case correctly and shows you the real match count.</p>
+    </details>
+
+    <details class="faq-item">
+      <summary>Are the UUIDs actually random, or predictable?</summary>
+      <p>They're generated using your browser's cryptographic random number generator (the same one used for security-sensitive operations), not a simple pseudo-random function — so they're suitable for real identifiers, not just placeholders.</p>
+    </details>
+
+    <details class="faq-item">
+      <summary>Found a bug or have a suggestion?</summary>
+      <p>See the <a href="devhub-contact.html">Contact</a> page for the fastest way to reach us.</p>
+    </details>
+  </div>
+</main>
+
+<footer>
+  <div class="foot-inner">
+    <nav>
+      <a href="devhub-about.html">About</a>
+      <a href="devhub-faq.html">FAQ</a>
+      <a href="devhub-contact.html">Contact</a>
+      <a href="devhub-terms.html">Terms</a>
+      <a href="devhub-privacy.html">Privacy</a>
+    </nav>
+    <p>© 2026 monospace</p>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>UUID Generator — monospace</title>
+<meta name="description" content="Generate cryptographically random v4 UUIDs, one or up to 100 at a time. Runs entirely in your browser.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Source+Sans+3:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="devhub-styles.css">
+</head>
+<body>
+
+<header class="nav">
+  <a href="index.html" class="wordmark">monospace<span class="cursor"></span></a>
+  <nav class="nav-links">
+    <a href="index.html">All tools</a>
+    <a href="devhub-about.html">About</a>
+    <a href="devhub-faq.html">FAQ</a>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <p class="eyebrow">UUID</p>
+    <h1>UUID Generator</h1>
+    <p class="lead">Cryptographically random version 4 UUIDs, generated locally — one, or a batch of up to 100 at once.</p>
+  </section>
+
+  <div class="term-window">
+    <div class="term-bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="term-title">uuid</span></div>
+    <div class="term-body">
+      <div class="field-row">
+        <div>
+          <label class="field-label" for="uuidCount">Count</label>
+          <input type="number" id="uuidCount" min="1" max="100" value="1" style="width:100px;">
+        </div>
+        <div class="check-row">
+          <input type="checkbox" id="uuidUpper">
+          <label for="uuidUpper">Uppercase</label>
+        </div>
+        <div class="check-row">
+          <input type="checkbox" id="uuidNoHyphen">
+          <label for="uuidNoHyphen">No hyphens</label>
+        </div>
+      </div>
+
+      <div class="btn-row">
+        <button class="primary" id="uuidGenerateBtn">Generate</button>
+        <button class="secondary" id="uuidCopyBtn">Copy all</button>
+      </div>
+
+      <label class="field-label">Output</label>
+      <div class="output-box" id="uuidOutput"></div>
+    </div>
+  </div>
+
+  <p class="tool-note">Generated locally using your browser's cryptographic random number generator — nothing is sent anywhere, and no two visitors ever get the same values.</p>
+</main>
+
+<footer>
+  <div class="foot-inner">
+    <nav>
+      <a href="devhub-about.html">About</a>
+      <a href="devhub-faq.html">FAQ</a>
+      <a href="devhub-contact.html">Contact</a>
+      <a href="devhub-terms.html">Terms</a>
+      <a href="devhub-privacy.html">Privacy</a>
+    </nav>
+    <p>© 2026 monospace</p>
+  </div>
+</footer>
+
+<script src="devhub-app.js"></script>
+</body>
+</html>
