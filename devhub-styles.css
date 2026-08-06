@@ -144,6 +144,22 @@ button.secondary:hover { border-color: var(--ink); }
 .tool-note { font-family: var(--sans); font-size: .84rem; color: var(--muted); margin-top: 14px; }
 
 footer { border-top: 1px solid var(--line); padding: 32px; margin-top: 20px; }
+.network-links { max-width: 1040px; margin: 0 auto 16px; text-align: center; font-family: var(--mono); font-size: .78rem; color: var(--muted); }
+.network-links a { color: var(--muted); text-decoration: underline; }
+.network-links a:hover { color: var(--ink); }
+
+/* Homepage "more tools" section */
+.network-section { padding: 8px 0 56px; }
+.network-section h2 { font-family: var(--mono); font-size: 1.3rem; margin: 0 0 20px; }
+.network-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; }
+.network-card {
+  display: block; border: 1px solid var(--line); border-radius: 6px; background: var(--panel);
+  padding: 20px; color: var(--ink); transition: border-color .15s ease, transform .15s ease;
+}
+.network-card:hover { border-color: var(--accent); transform: translateY(-2px); text-decoration: none; }
+.network-card .glyph-small { font-size: 1.3rem; color: var(--accent); margin: 0 0 10px; font-weight: 600; }
+.network-card h3 { margin: 0 0 6px; font-size: 1rem; }
+.network-card p { font-family: var(--sans); color: var(--muted); font-size: .86rem; margin: 0; }
 footer .foot-inner { max-width: 1040px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
 footer nav { display: flex; gap: 16px; font-size: .78rem; }
 footer p { color: var(--muted); font-size: .78rem; margin: 0; }
