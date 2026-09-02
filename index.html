@@ -11,15 +11,6 @@
   gtag('js', new Date());
   gtag('config', 'G-QHNBY3GR6L');
 </script>
-<script>
-(function(){
-  try {
-    var saved = localStorage.getItem("monospace-theme");
-    var theme = saved || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
-    document.documentElement.setAttribute("data-theme", theme);
-  } catch (e) {}
-})();
-</script>
 <meta name="google-adsense-account" content="ca-pub-8828337552440063">
 <title>Monospace — JSON formatter, Base64, regex tester, UUID generator</title>
 <meta name="description" content="Four fast developer tools that run entirely in your browser: JSON formatter, Base64 encoder/decoder, regex tester, and UUID generator. No signup, nothing uploaded.">
@@ -32,9 +23,6 @@
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="canonical" href="https://monospace.tools/">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'><rect width='40' height='40' fill='%23FFFFFF'/><rect x='6' y='6' width='28' height='4' fill='%230B0B0C'/><rect x='6' y='14' width='16' height='4' fill='%23E5147A'/></svg>">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Source+Sans+3:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="devhub-styles.css">
 </head>
 <body>
@@ -65,28 +53,28 @@
   <section class="tool-grid">
     <a href="devhub-json.html" class="tool-card">
       <div class="bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
-      <div class="glyph">{ }</div>
+      <p class="glyph">{ }</p>
       <h3>JSON Formatter</h3>
       <p>Pretty-print, minify, and validate JSON with clear error messages.</p>
       <span class="tool-cta">OPEN TOOL <span class="arrow">&rarr;</span></span>
     </a>
     <a href="devhub-base64.html" class="tool-card">
       <div class="bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
-      <div class="glyph">01&rarr;Az</div>
+      <p class="glyph">01&rarr;Az</p>
       <h3>Base64 Encode / Decode</h3>
       <p>Convert text to Base64 and back, with full Unicode support.</p>
       <span class="tool-cta">OPEN TOOL <span class="arrow">&rarr;</span></span>
     </a>
     <a href="devhub-regex.html" class="tool-card">
       <div class="bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
-      <div class="glyph">/.*/</div>
+      <p class="glyph">/.*/</p>
       <h3>Regex Tester</h3>
       <p>Live match highlighting, capture groups, and flag support.</p>
       <span class="tool-cta">OPEN TOOL <span class="arrow">&rarr;</span></span>
     </a>
     <a href="devhub-uuid.html" class="tool-card">
       <div class="bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
-      <div class="glyph">#4a1f</div>
+      <p class="glyph">#4a1f</p>
       <h3>UUID Generator</h3>
       <p>Generate up to 100 cryptographically random v4 UUIDs at once.</p>
       <span class="tool-cta">OPEN TOOL <span class="arrow">&rarr;</span></span>
@@ -129,5 +117,6 @@
 </footer>
 
 <script src="devhub-theme.js"></script>
+<script src="devhub-app.js"></script>
 </body>
 </html>

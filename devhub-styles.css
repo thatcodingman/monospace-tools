@@ -60,7 +60,6 @@ header.nav {
 .nav-links a { color: var(--muted); }
 .nav-links a:hover { color: var(--ink); text-decoration: none; }
 
-/* Priority #7 — Light/Dark is a real theme control, visually separated from nav links */
 .theme-toggle {
   font-family: var(--mono); font-size: .76rem; display: inline-flex; align-items: center; gap: 6px;
   background: var(--panel); border: 1px solid var(--line);
@@ -72,13 +71,12 @@ header.nav {
 
 main { max-width: 1040px; margin: 0 auto; padding: 0 32px; }
 
-/* Hero — Priority #6: tightened spacing so tools arrive sooner */
-.hero { padding: 48px 0 24px; max-width: 720px; }
+/* Hero */
+.hero { padding: 48px 0 20px; max-width: 720px; }
 .hero .eyebrow { font-size: .78rem; text-transform: uppercase; letter-spacing: .08em; color: var(--accent); margin: 0 0 16px; }
 .hero h1 { font-size: clamp(1.9rem, 4vw, 2.9rem); font-weight: 600; line-height: 1.15; margin: 0 0 16px; }
 .hero p.lead { font-family: var(--sans); color: var(--body-text); font-size: 1.1rem; margin: 0; max-width: 600px; }
 
-/* Priority #5 — client-side trust signal, sits near the grid without competing with the headline */
 .trust-signal {
   display: inline-flex; align-items: center; gap: 8px; margin: 18px 0 0;
   font-family: var(--mono); font-size: .74rem; letter-spacing: .04em; color: var(--muted);
@@ -94,18 +92,29 @@ main { max-width: 1040px; margin: 0 auto; padding: 0 32px; }
 }
 @media (prefers-reduced-motion: reduce) { .pulse-dot { animation: none; } }
 
-/* Tool cards on the hub page — Priority #1: 4-col desktop / 2x2 tablet / 1-col mobile */
-.tool-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; padding: 28px 0 64px; }
+/* Round 2 - one compact benefit line just under the trust signal */
+.trust-sub {
+  font-family: var(--mono); font-size: .72rem; letter-spacing: .05em; color: var(--muted);
+  margin: 8px 0 0; padding-left: 15px;
+}
+
+/* Round 2 - a deliberate hero-to-grid transition instead of empty space */
+.section-divider {
+  display: flex; align-items: center; gap: 14px; max-width: 1040px; margin: 28px auto 6px; padding: 0 32px;
+}
+.section-divider span { flex: 1; height: 1px; background: var(--line); }
+.section-divider i { font-style: normal; font-size: .6rem; color: var(--accent); opacity: .7; }
+
+/* Tool cards on the hub page */
+.tool-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; padding: 22px 0 56px; }
 @media (max-width: 900px) { .tool-grid { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 560px) { .tool-grid { grid-template-columns: 1fr; } }
 
-/* Priority #3 — every card shares the same structure/height so none looks orphaned */
 .tool-card {
   border: 1px solid var(--line); border-radius: 6px; background: var(--panel);
   padding: 0; overflow: hidden; transition: border-color .15s ease, transform .15s ease;
-  display: flex; flex-direction: column; min-height: 236px; color: var(--ink);
+  display: flex; flex-direction: column; min-height: 256px; color: var(--ink);
 }
-/* Priority #4 — subtle hover lift, brighter border/accent, arrow nudge */
 .tool-card:hover { border-color: var(--accent); transform: translateY(-3px); text-decoration: none; }
 .tool-card .bar { display: flex; gap: 6px; padding: 10px 14px; border-bottom: 1px solid var(--line); }
 .tool-card .dot { width: 9px; height: 9px; border-radius: 50%; border: 1.5px solid var(--muted); opacity: .5; }
@@ -113,20 +122,38 @@ main { max-width: 1040px; margin: 0 auto; padding: 0 32px; }
   font-size: 1.6rem; padding: 22px 16px 10px; color: var(--accent); font-weight: 600; margin: 0;
   transition: color .15s ease;
 }
-.tool-card:hover .glyph { color: var(--accent); filter: brightness(1.15); }
+.tool-card:hover .glyph { filter: brightness(1.15); }
 .tool-card h3 { margin: 0; padding: 0 16px; font-size: 1.05rem; }
-.tool-card p:not(.tool-cta) {
+.tool-card p:not(.tool-cta):not(.tool-meta) {
   font-family: var(--sans); color: var(--muted); font-size: .88rem; margin: 6px 0 0;
   padding: 0 16px; flex: 1;
 }
+/* Round 2 - tiny product-detail line per card */
+.tool-card p.tool-meta {
+  font-family: var(--mono); font-size: .72rem; letter-spacing: .02em; color: var(--accent);
+  margin: 10px 0 0; padding: 0 16px; opacity: .85;
+}
 
-/* Priority #2 — OPEN TOOL CTA, small and right-aligned, pinned to card bottom */
 .tool-cta {
   display: block; text-align: right; font-family: var(--mono); font-size: .74rem; font-weight: 600;
   letter-spacing: .04em; color: var(--accent); padding: 14px 16px; margin-top: auto;
 }
 .tool-cta .arrow { display: inline-block; transition: transform .15s ease; }
 .tool-card:hover .tool-cta .arrow { transform: translateX(3px); }
+
+/* Round 2 - "Why Monospace?" block: one wide restrained section, not more cards */
+.why-section { padding: 8px 0 48px; }
+.why-section h2 { font-family: var(--mono); font-size: 1.3rem; margin: 0 0 22px; }
+.why-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+@media (max-width: 760px) { .why-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 480px) { .why-grid { grid-template-columns: 1fr; } }
+.why-item .why-glyph { font-size: 1.1rem; color: var(--accent); margin: 0 0 8px; }
+.why-item h3 { font-size: .95rem; margin: 0 0 4px; }
+.why-item p { font-family: var(--sans); color: var(--muted); font-size: .86rem; margin: 0; }
+
+/* Round 2 - compact FAQ preview on the homepage */
+.faq-mini { padding: 8px 0 56px; }
+.faq-mini h2 { font-family: var(--mono); font-size: 1.3rem; margin: 0 0 6px; }
 
 /* Terminal-style tool window */
 .term-window { border: 1px solid var(--line); border-radius: 6px; background: var(--panel); margin: 8px 0 24px; overflow: hidden; }
@@ -200,7 +227,9 @@ footer { border-top: 1px solid var(--line); padding: 32px; margin-top: 20px; }
 .network-card .glyph-small { font-size: 1.3rem; color: var(--accent); margin: 0 0 10px; font-weight: 600; }
 .network-card h3 { margin: 0 0 6px; font-size: 1rem; }
 .network-card p { font-family: var(--sans); color: var(--muted); font-size: .86rem; margin: 0; }
-footer .foot-inner { max-width: 1040px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+footer .foot-inner { max-width: 1040px; margin: 0 auto; display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 12px; }
+/* Round 2 - footer is a little more product-focused */
+.footer-tagline { font-family: var(--mono); font-size: .78rem; color: var(--ink); margin: 0 0 10px; }
 footer nav { display: flex; gap: 16px; font-size: .78rem; }
 footer p { color: var(--muted); font-size: .78rem; margin: 0; }
 
@@ -219,7 +248,7 @@ footer p { color: var(--muted); font-size: .78rem; margin: 0; }
 }
 .faq-item summary::-webkit-details-marker { display: none; }
 .faq-item summary::after { content: "+"; color: var(--accent); flex-shrink: 0; }
-.faq-item[open] summary::after { content: "–"; }
+.faq-item[open] summary::after { content: "-"; }
 .faq-item p { font-family: var(--sans); margin: 10px 0 0; color: var(--body-text); }
 
 .contact-card { max-width: 480px; padding: 24px; background: var(--panel); border: 1px solid var(--line); border-radius: 6px; margin: 22px 0; }
@@ -233,4 +262,5 @@ footer p { color: var(--muted); font-size: .78rem; margin: 0; }
   .nav-right { gap: 14px; }
   main { padding: 0 16px; }
   .term-body { padding: 16px; }
+  .section-divider { padding: 0 16px; }
 }
