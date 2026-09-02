@@ -2,9 +2,14 @@ function initThemeToggle() {
   const btn = document.getElementById('themeToggle');
   if (!btn) return;
 
+  const icon = btn.querySelector('.theme-icon');
+  const label = btn.querySelector('.theme-label');
+
   function updateLabel() {
     const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
-    btn.textContent = isDark ? 'Light' : 'Dark';
+    if (icon) icon.textContent = isDark ? '\u2600' : '\u263D'; // ☀ / ☽
+    if (label) label.textContent = isDark ? 'Light' : 'Dark';
+    if (!icon && !label) btn.textContent = isDark ? 'Light' : 'Dark';
     btn.setAttribute('aria-label', isDark ? 'Switch to light theme' : 'Switch to dark theme');
   }
 
