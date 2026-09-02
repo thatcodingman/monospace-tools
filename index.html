@@ -11,6 +11,15 @@
   gtag('js', new Date());
   gtag('config', 'G-QHNBY3GR6L');
 </script>
+<script>
+(function(){
+  try {
+    var saved = localStorage.getItem("monospace-theme");
+    var theme = saved || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+    document.documentElement.setAttribute("data-theme", theme);
+  } catch (e) {}
+})();
+</script>
 <meta name="google-adsense-account" content="ca-pub-8828337552440063">
 <title>Monospace — JSON formatter, Base64, regex tester, UUID generator</title>
 <meta name="description" content="Four fast developer tools that run entirely in your browser: JSON formatter, Base64 encoder/decoder, regex tester, and UUID generator. No signup, nothing uploaded.">
@@ -23,6 +32,9 @@
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="canonical" href="https://monospace.tools/">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'><rect width='40' height='40' fill='%23FFFFFF'/><rect x='6' y='6' width='28' height='4' fill='%230B0B0C'/><rect x='6' y='14' width='16' height='4' fill='%23E5147A'/></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Source+Sans+3:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="devhub-styles.css">
 </head>
 <body>
@@ -48,37 +60,93 @@
     <h1>Four tools. One tab. Zero signup.</h1>
     <p class="lead">JSON formatting, Base64 encoding, regex testing, and UUID generation — each one fast, each one running entirely in your browser. Nothing you paste here ever leaves your machine.</p>
     <p class="trust-signal"><span class="pulse-dot" aria-hidden="true"></span> 100% CLIENT-SIDE — RUNS IN YOUR BROWSER</p>
+    <p class="trust-sub">NO ACCOUNT &middot; NO UPLOADS &middot; NO SERVER PROCESSING</p>
   </section>
+
+  <div class="section-divider" aria-hidden="true"><span></span><i>&#9670;</i><span></span></div>
 
   <section class="tool-grid">
     <a href="devhub-json.html" class="tool-card">
       <div class="bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
-      <p class="glyph">{ }</p>
+      <div class="glyph">{ }</div>
       <h3>JSON Formatter</h3>
       <p>Pretty-print, minify, and validate JSON with clear error messages.</p>
+      <p class="tool-meta">Pretty-print &middot; Minify &middot; Validate</p>
       <span class="tool-cta">OPEN TOOL <span class="arrow">&rarr;</span></span>
     </a>
     <a href="devhub-base64.html" class="tool-card">
       <div class="bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
-      <p class="glyph">01&rarr;Az</p>
+      <div class="glyph">01&rarr;Az</div>
       <h3>Base64 Encode / Decode</h3>
       <p>Convert text to Base64 and back, with full Unicode support.</p>
+      <p class="tool-meta">Encode &middot; Decode &middot; Unicode-safe</p>
       <span class="tool-cta">OPEN TOOL <span class="arrow">&rarr;</span></span>
     </a>
     <a href="devhub-regex.html" class="tool-card">
       <div class="bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
-      <p class="glyph">/.*/</p>
+      <div class="glyph">/.*/</div>
       <h3>Regex Tester</h3>
       <p>Live match highlighting, capture groups, and flag support.</p>
+      <p class="tool-meta">Live matches &middot; Groups &middot; Flags</p>
       <span class="tool-cta">OPEN TOOL <span class="arrow">&rarr;</span></span>
     </a>
     <a href="devhub-uuid.html" class="tool-card">
       <div class="bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
-      <p class="glyph">#4a1f</p>
+      <div class="glyph">#4a1f</div>
       <h3>UUID Generator</h3>
       <p>Generate up to 100 cryptographically random v4 UUIDs at once.</p>
+      <p class="tool-meta">v4 &middot; Bulk generation &middot; Copy-ready</p>
       <span class="tool-cta">OPEN TOOL <span class="arrow">&rarr;</span></span>
     </a>
+  </section>
+
+  <section class="why-section">
+    <p class="why-eyebrow">MORE THAN FOUR TOOLS</p>
+    <h2>Small utilities. No accounts. No tracking. No nonsense.</h2>
+    <p class="why-intro">Monospace exists so you don't need five tabs open across five different ad-choked utility sites for one-off dev tasks. Every tool here works the same way — open it, use it, done.</p>
+    <div class="why-grid">
+      <div class="why-item">
+        <p class="why-glyph">&#9635;</p>
+        <h3>Browser-based</h3>
+        <p>Every tool runs client-side — nothing you paste is sent to a server.</p>
+      </div>
+      <div class="why-item">
+        <p class="why-glyph">&#9698;</p>
+        <h3>No signup</h3>
+        <p>Open a tool and use it immediately. No account, ever.</p>
+      </div>
+      <div class="why-item">
+        <p class="why-glyph">&#9654;</p>
+        <h3>Fast</h3>
+        <p>No server round-trip slowing down simple tasks.</p>
+      </div>
+      <div class="why-item">
+        <p class="why-glyph">&#9670;</p>
+        <h3>Privacy-first</h3>
+        <p>What you paste stays on your machine, period.</p>
+      </div>
+    </div>
+    <p class="coming-next">Coming next: a hash generator and a JWT decoder — same browser-only approach.</p>
+  </section>
+
+  <section class="faq-mini">
+    <h2>Common questions</h2>
+    <details class="faq-item">
+      <summary>Does my data leave my device?</summary>
+      <p>No. Every tool on this page runs entirely client-side — what you paste is processed in your browser and never sent to a server.</p>
+    </details>
+    <details class="faq-item">
+      <summary>Do I need an account?</summary>
+      <p>No. There's no signup, login, or account of any kind. Open a tool and start using it.</p>
+    </details>
+    <details class="faq-item">
+      <summary>Is there a file or input-size limit?</summary>
+      <p>Limits come from your browser's memory, not from us — for typical text, JSON, or UUID batches you won't hit them.</p>
+    </details>
+    <details class="faq-item">
+      <summary>Can I use these tools for work?</summary>
+      <p>Yes. Since nothing you paste is uploaded anywhere, these tools are safe to use with internal or sensitive data.</p>
+    </details>
   </section>
 
   <section class="network-section">
@@ -105,18 +173,20 @@
 
 <footer>
   <div class="foot-inner">
-    <nav>
-      <a href="devhub-about.html">About</a>
-      <a href="devhub-faq.html">FAQ</a>
-      <a href="devhub-contact.html">Contact</a>
-      <a href="devhub-terms.html">Terms</a>
-      <a href="devhub-privacy.html">Privacy</a>
-    </nav>
+    <div>
+      <p class="footer-tagline">Four browser tools. No signup. No uploads.</p>
+      <nav>
+        <a href="devhub-about.html">About</a>
+        <a href="devhub-faq.html">FAQ</a>
+        <a href="devhub-contact.html">Contact</a>
+        <a href="devhub-terms.html">Terms</a>
+        <a href="devhub-privacy.html">Privacy</a>
+      </nav>
+    </div>
     <p>&copy; 2026 monospace — everything above runs in your browser.</p>
   </div>
 </footer>
 
 <script src="devhub-theme.js"></script>
-<script src="devhub-app.js"></script>
 </body>
 </html>

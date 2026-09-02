@@ -71,8 +71,8 @@ header.nav {
 
 main { max-width: 1040px; margin: 0 auto; padding: 0 32px; }
 
-/* Hero */
-.hero { padding: 48px 0 20px; max-width: 720px; }
+/* Hero — round 3: tightened further so the divider/grid follow sooner */
+.hero { padding: 48px 0 14px; max-width: 720px; }
 .hero .eyebrow { font-size: .78rem; text-transform: uppercase; letter-spacing: .08em; color: var(--accent); margin: 0 0 16px; }
 .hero h1 { font-size: clamp(1.9rem, 4vw, 2.9rem); font-weight: 600; line-height: 1.15; margin: 0 0 16px; }
 .hero p.lead { font-family: var(--sans); color: var(--body-text); font-size: 1.1rem; margin: 0; max-width: 600px; }
@@ -92,66 +92,80 @@ main { max-width: 1040px; margin: 0 auto; padding: 0 32px; }
 }
 @media (prefers-reduced-motion: reduce) { .pulse-dot { animation: none; } }
 
-/* Round 2 - one compact benefit line just under the trust signal */
 .trust-sub {
   font-family: var(--mono); font-size: .72rem; letter-spacing: .05em; color: var(--muted);
-  margin: 8px 0 0; padding-left: 15px;
+  margin: 6px 0 0; padding-left: 15px;
 }
 
-/* Round 2 - a deliberate hero-to-grid transition instead of empty space */
+/* round 3: shorter gap before the grid */
 .section-divider {
-  display: flex; align-items: center; gap: 14px; max-width: 1040px; margin: 28px auto 6px; padding: 0 32px;
+  display: flex; align-items: center; gap: 14px; max-width: 1040px; margin: 16px auto 4px; padding: 0 32px;
 }
 .section-divider span { flex: 1; height: 1px; background: var(--line); }
 .section-divider i { font-style: normal; font-size: .6rem; color: var(--accent); opacity: .7; }
 
-/* Tool cards on the hub page */
-.tool-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; padding: 22px 0 56px; }
+/* Tool cards */
+.tool-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; padding: 12px 0 48px; }
 @media (max-width: 900px) { .tool-grid { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 560px) { .tool-grid { grid-template-columns: 1fr; } }
 
 .tool-card {
   border: 1px solid var(--line); border-radius: 6px; background: var(--panel);
-  padding: 0; overflow: hidden; transition: border-color .15s ease, transform .15s ease;
-  display: flex; flex-direction: column; min-height: 256px; color: var(--ink);
+  padding: 0; overflow: hidden; transition: border-color .15s ease, transform .15s ease, box-shadow .15s ease;
+  display: flex; flex-direction: column; color: var(--ink);
 }
-.tool-card:hover { border-color: var(--accent); transform: translateY(-3px); text-decoration: none; }
-.tool-card .bar { display: flex; gap: 6px; padding: 10px 14px; border-bottom: 1px solid var(--line); }
+/* round 3: identical hover treatment guaranteed on every card, with a restrained glow */
+.tool-card:hover,
+.tool-card:focus-visible {
+  border-color: var(--accent);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px -8px var(--accent-dim);
+  text-decoration: none;
+}
+.tool-card .bar { display: flex; gap: 6px; padding: 9px 14px; border-bottom: 1px solid var(--line); }
 .tool-card .dot { width: 9px; height: 9px; border-radius: 50%; border: 1.5px solid var(--muted); opacity: .5; }
+
+/* round 3: bigger, brighter tool marks so they read as visual anchors */
 .tool-card .glyph {
-  font-size: 1.6rem; padding: 22px 16px 10px; color: var(--accent); font-weight: 600; margin: 0;
-  transition: color .15s ease;
+  font-size: 2rem; font-weight: 700; padding: 18px 16px 6px; color: var(--accent); margin: 0;
+  transition: filter .15s ease; opacity: 1;
 }
-.tool-card:hover .glyph { filter: brightness(1.15); }
-.tool-card h3 { margin: 0; padding: 0 16px; font-size: 1.05rem; }
+.tool-card:hover .glyph { filter: brightness(1.2); }
+/* fixed height reserved so a 2-line title (Base64) doesn't push its card's content down */
+.tool-card h3 { margin: 0; padding: 0 16px; font-size: 1.05rem; line-height: 1.3; min-height: 2.6em; }
+/* fixed height reserved so a 3-line description (UUID) doesn't misalign the meta line below it */
 .tool-card p:not(.tool-cta):not(.tool-meta) {
   font-family: var(--sans); color: var(--muted); font-size: .88rem; margin: 6px 0 0;
-  padding: 0 16px; flex: 1;
+  padding: 0 16px; line-height: 1.55; min-height: 4.65em; flex: 0 0 auto;
 }
-/* Round 2 - tiny product-detail line per card */
 .tool-card p.tool-meta {
-  font-family: var(--mono); font-size: .72rem; letter-spacing: .02em; color: var(--accent);
-  margin: 10px 0 0; padding: 0 16px; opacity: .85;
+  font-family: var(--mono); font-size: .66rem; letter-spacing: .01em; color: var(--accent);
+  margin: 8px 0 0; padding: 0 16px; opacity: .85; font-weight: 400;
 }
 
 .tool-cta {
   display: block; text-align: right; font-family: var(--mono); font-size: .74rem; font-weight: 600;
-  letter-spacing: .04em; color: var(--accent); padding: 14px 16px; margin-top: auto;
+  letter-spacing: .04em; color: var(--accent); padding: 12px 16px; margin-top: auto;
 }
 .tool-cta .arrow { display: inline-block; transition: transform .15s ease; }
 .tool-card:hover .tool-cta .arrow { transform: translateX(3px); }
 
-/* Round 2 - "Why Monospace?" block: one wide restrained section, not more cards */
-.why-section { padding: 8px 0 48px; }
-.why-section h2 { font-family: var(--mono); font-size: 1.3rem; margin: 0 0 22px; }
+/* round 3: "More Than Four Tools" section — replaces the generic Why block copy */
+.why-section { padding: 8px 0 48px; max-width: 760px; }
+.why-eyebrow { font-size: .74rem; text-transform: uppercase; letter-spacing: .08em; color: var(--accent); margin: 0 0 10px; }
+.why-section h2 { font-family: var(--mono); font-size: 1.25rem; font-weight: 600; margin: 0 0 14px; line-height: 1.3; }
+.why-intro { font-family: var(--sans); color: var(--body-text); font-size: .96rem; margin: 0 0 26px; max-width: 640px; }
 .why-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
 @media (max-width: 760px) { .why-grid { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 480px) { .why-grid { grid-template-columns: 1fr; } }
 .why-item .why-glyph { font-size: 1.1rem; color: var(--accent); margin: 0 0 8px; }
 .why-item h3 { font-size: .95rem; margin: 0 0 4px; }
 .why-item p { font-family: var(--sans); color: var(--muted); font-size: .86rem; margin: 0; }
+.coming-next {
+  font-family: var(--mono); font-size: .78rem; color: var(--muted); margin: 26px 0 0;
+  padding-top: 16px; border-top: 1px dashed var(--line);
+}
 
-/* Round 2 - compact FAQ preview on the homepage */
 .faq-mini { padding: 8px 0 56px; }
 .faq-mini h2 { font-family: var(--mono); font-size: 1.3rem; margin: 0 0 6px; }
 
@@ -215,7 +229,6 @@ footer { border-top: 1px solid var(--line); padding: 32px; margin-top: 20px; }
 .network-links a { color: var(--muted); text-decoration: underline; }
 .network-links a:hover { color: var(--ink); }
 
-/* Homepage "more tools" section */
 .network-section { padding: 8px 0 56px; }
 .network-section h2 { font-family: var(--mono); font-size: 1.3rem; margin: 0 0 20px; }
 .network-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; }
@@ -228,12 +241,10 @@ footer { border-top: 1px solid var(--line); padding: 32px; margin-top: 20px; }
 .network-card h3 { margin: 0 0 6px; font-size: 1rem; }
 .network-card p { font-family: var(--sans); color: var(--muted); font-size: .86rem; margin: 0; }
 footer .foot-inner { max-width: 1040px; margin: 0 auto; display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 12px; }
-/* Round 2 - footer is a little more product-focused */
 .footer-tagline { font-family: var(--mono); font-size: .78rem; color: var(--ink); margin: 0 0 10px; }
 footer nav { display: flex; gap: 16px; font-size: .78rem; }
 footer p { color: var(--muted); font-size: .78rem; margin: 0; }
 
-/* Legal pages */
 .legal { padding: 48px 0 80px; max-width: 720px; font-family: var(--sans); }
 .legal h1 { font-family: var(--mono); font-size: 1.9rem; margin-bottom: 6px; }
 .legal .updated { font-size: .78rem; color: var(--muted); margin-bottom: 36px; font-family: var(--mono); }
