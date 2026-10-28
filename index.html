@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="index, follow">
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-QHNBY3GR6L"></script>
 <script>
@@ -21,12 +22,12 @@
 })();
 </script>
 <meta name="google-adsense-account" content="ca-pub-8828337552440063">
-<title>Monospace — JSON formatter, Base64, regex tester, UUID generator</title>
-<meta name="description" content="Four fast developer tools that run entirely in your browser: JSON formatter, Base64 encoder/decoder, regex tester, and UUID generator. No signup, nothing uploaded.">
+<title>Monospace — 10 Free Developer Tools (JSON, Base64, Regex, JWT &amp; More)</title>
+<meta name="description" content="10 free browser-based developer tools: JSON formatter, Base64, regex tester, UUID generator, hash generator, JWT decoder &amp; more. No signup required.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://monospace.tools/">
-<meta property="og:title" content="Monospace — JSON formatter, Base64, regex tester, UUID generator">
-<meta property="og:description" content="Four fast developer tools that run entirely in your browser: JSON formatter, Base64 encoder/decoder, regex tester, and UUID generator. No signup, nothing uploaded.">
+<meta property="og:title" content="Monospace — 10 Free Developer Tools (JSON, Base64, Regex, JWT & More)">
+<meta property="og:description" content="10 free browser-based developer tools: JSON formatter, Base64, regex tester, UUID generator, hash generator, JWT decoder & more. No signup required.">
 <meta property="og:image" content="https://monospace.tools/devhub-og.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -36,6 +37,39 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Source+Sans+3:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="devhub-styles.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Monospace",
+  "url": "https://monospace.tools/",
+  "description": "10 free browser-based developer tools: JSON formatter, Base64, regex tester, UUID generator, hash generator, JWT decoder and more.",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://monospace.tools/?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Monospace developer tools",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "url": "https://monospace.tools/devhub-json.html", "name": "JSON Formatter" },
+    { "@type": "ListItem", "position": 2, "url": "https://monospace.tools/devhub-base64.html", "name": "Base64 Encode / Decode" },
+    { "@type": "ListItem", "position": 3, "url": "https://monospace.tools/devhub-regex.html", "name": "Regex Tester" },
+    { "@type": "ListItem", "position": 4, "url": "https://monospace.tools/devhub-uuid.html", "name": "UUID Generator" },
+    { "@type": "ListItem", "position": 5, "url": "https://monospace.tools/devhub-hash.html", "name": "Hash Generator" },
+    { "@type": "ListItem", "position": 6, "url": "https://monospace.tools/devhub-jwt.html", "name": "JWT Decoder" },
+    { "@type": "ListItem", "position": 7, "url": "https://monospace.tools/devhub-case.html", "name": "Case Converter" },
+    { "@type": "ListItem", "position": 8, "url": "https://monospace.tools/devhub-url.html", "name": "URL Encode / Decode" },
+    { "@type": "ListItem", "position": 9, "url": "https://monospace.tools/devhub-lorem.html", "name": "Lorem Ipsum Generator" },
+    { "@type": "ListItem", "position": 10, "url": "https://monospace.tools/devhub-cron.html", "name": "Cron Expression Explainer" }
+  ]
+}
+</script>
 </head>
 <body>
 
@@ -57,8 +91,8 @@
 <main>
   <section class="hero">
     <p class="eyebrow">Developer tools</p>
-    <h1>Four tools. One tab. Zero signup.</h1>
-    <p class="lead">JSON formatting, Base64 encoding, regex testing, and UUID generation — each one fast, each one running entirely in your browser. Nothing you paste here ever leaves your machine.</p>
+    <h1>10 tools. One tab. Zero signup.</h1>
+    <p class="lead">JSON formatting, Base64 encoding, regex testing, UUID generation, hashing, JWT decoding, and more — each one fast, each one running entirely in your browser. Nothing you paste here ever leaves your machine.</p>
     <p class="trust-signal"><span class="pulse-dot" aria-hidden="true"></span> 100% CLIENT-SIDE — RUNS IN YOUR BROWSER</p>
     <p class="trust-sub">NO ACCOUNT &middot; NO UPLOADS &middot; NO SERVER PROCESSING</p>
   </section>
@@ -98,10 +132,58 @@
       <p class="tool-meta">v4 &middot; Bulk generation &middot; Copy-ready</p>
       <span class="tool-cta">OPEN TOOL <span class="arrow">&rarr;</span></span>
     </a>
+    <a href="devhub-hash.html" class="tool-card">
+      <div class="bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+      <div class="glyph">SHA#</div>
+      <h3>Hash Generator</h3>
+      <p>Generate SHA-1, SHA-256, SHA-384, and SHA-512 hashes from text.</p>
+      <p class="tool-meta">SHA-1 &middot; SHA-256 &middot; SHA-384 &middot; SHA-512</p>
+      <span class="tool-cta">OPEN TOOL <span class="arrow">&rarr;</span></span>
+    </a>
+    <a href="devhub-jwt.html" class="tool-card">
+      <div class="bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+      <div class="glyph">JWT</div>
+      <h3>JWT Decoder</h3>
+      <p>Decode a JSON Web Token's header and payload to plain JSON.</p>
+      <p class="tool-meta">Header &middot; Payload &middot; No verification</p>
+      <span class="tool-cta">OPEN TOOL <span class="arrow">&rarr;</span></span>
+    </a>
+    <a href="devhub-case.html" class="tool-card">
+      <div class="bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+      <div class="glyph">Aa&equiv;</div>
+      <h3>Case Converter</h3>
+      <p>Convert text between UPPER, lower, Title, camelCase, snake_case, and kebab-case.</p>
+      <p class="tool-meta">6 case styles &middot; Instant &middot; Copy-ready</p>
+      <span class="tool-cta">OPEN TOOL <span class="arrow">&rarr;</span></span>
+    </a>
+    <a href="devhub-url.html" class="tool-card">
+      <div class="bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+      <div class="glyph">%20</div>
+      <h3>URL Encode / Decode</h3>
+      <p>Encode or decode URL components and query strings instantly.</p>
+      <p class="tool-meta">Encode &middot; Decode &middot; Component-safe</p>
+      <span class="tool-cta">OPEN TOOL <span class="arrow">&rarr;</span></span>
+    </a>
+    <a href="devhub-lorem.html" class="tool-card">
+      <div class="bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+      <div class="glyph">&para;&para;&para;</div>
+      <h3>Lorem Ipsum Generator</h3>
+      <p>Generate placeholder text by paragraphs, sentences, or words.</p>
+      <p class="tool-meta">Paragraphs &middot; Sentences &middot; Words</p>
+      <span class="tool-cta">OPEN TOOL <span class="arrow">&rarr;</span></span>
+    </a>
+    <a href="devhub-cron.html" class="tool-card">
+      <div class="bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+      <div class="glyph">* * *</div>
+      <h3>Cron Expression Explainer</h3>
+      <p>Translate a cron expression into a plain-English schedule.</p>
+      <p class="tool-meta">5-field cron &middot; Plain English</p>
+      <span class="tool-cta">OPEN TOOL <span class="arrow">&rarr;</span></span>
+    </a>
   </section>
 
   <section class="why-section">
-    <p class="why-eyebrow">MORE THAN FOUR TOOLS</p>
+    <p class="why-eyebrow">TEN TOOLS AND COUNTING</p>
     <h2>Small utilities. No accounts. No tracking. No nonsense.</h2>
     <p class="why-intro">Monospace exists so you don't need five tabs open across five different ad-choked utility sites for one-off dev tasks. Every tool here works the same way — open it, use it, done.</p>
     <div class="why-grid">
@@ -126,7 +208,6 @@
         <p>What you paste stays on your machine, period.</p>
       </div>
     </div>
-    <p class="coming-next">Coming next: a hash generator and a JWT decoder — same browser-only approach.</p>
   </section>
 
   <section class="faq-mini">
@@ -174,7 +255,7 @@
 <footer>
   <div class="foot-inner">
     <div>
-      <p class="footer-tagline">Four browser tools. No signup. No uploads.</p>
+      <p class="footer-tagline">10 browser tools. No signup. No uploads.</p>
       <nav>
         <a href="devhub-about.html">About</a>
         <a href="devhub-faq.html">FAQ</a>

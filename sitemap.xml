@@ -1,10 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://monospace.tools/</loc></url>
+  <url><loc>https://monospace.tools/</loc><priority>1.0</priority></url>
   <url><loc>https://monospace.tools/devhub-json.html</loc></url>
   <url><loc>https://monospace.tools/devhub-base64.html</loc></url>
   <url><loc>https://monospace.tools/devhub-regex.html</loc></url>
   <url><loc>https://monospace.tools/devhub-uuid.html</loc></url>
+  <url><loc>https://monospace.tools/devhub-hash.html</loc></url>
+  <url><loc>https://monospace.tools/devhub-jwt.html</loc></url>
+  <url><loc>https://monospace.tools/devhub-case.html</loc></url>
+  <url><loc>https://monospace.tools/devhub-url.html</loc></url>
+  <url><loc>https://monospace.tools/devhub-lorem.html</loc></url>
+  <url><loc>https://monospace.tools/devhub-cron.html</loc></url>
   <url><loc>https://monospace.tools/devhub-about.html</loc></url>
   <url><loc>https://monospace.tools/devhub-faq.html</loc></url>
   <url><loc>https://monospace.tools/devhub-contact.html</loc></url>
