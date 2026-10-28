@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="index, follow">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QHNBY3GR6L"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-QHNBY3GR6L');
+</script>
+<script>
+(function(){
+  try {
+    var saved = localStorage.getItem("monospace-theme");
+    var theme = saved || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+    document.documentElement.setAttribute("data-theme", theme);
+  } catch (e) {}
+})();
+</script>
+<title>Hash Generator — SHA-1, SHA-256, SHA-384, SHA-512 — monospace</title>
+<meta name="description" content="Generate SHA-1, SHA-256, SHA-384, and SHA-512 hashes from any text, instantly. Runs entirely in your browser using the Web Crypto API.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://monospace.tools/devhub-hash.html">
+<meta property="og:title" content="Hash Generator — SHA-1, SHA-256, SHA-384, SHA-512 — monospace">
+<meta property="og:description" content="Generate SHA-1, SHA-256, SHA-384, and SHA-512 hashes from any text, instantly. Runs entirely in your browser using the Web Crypto API.">
+<meta property="og:image" content="https://monospace.tools/devhub-og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://monospace.tools/devhub-hash.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Source+Sans+3:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="devhub-styles.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Hash Generator",
+  "url": "https://monospace.tools/devhub-hash.html",
+  "applicationCategory": "DeveloperApplication",
+  "operatingSystem": "Any (runs in browser)",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+  "description": "Generate SHA-1, SHA-256, SHA-384, and SHA-512 hashes from text entirely in your browser."
+}
+</script>
+</head>
+<body>
+
+<header class="nav">
+  <a href="index.html" class="wordmark">monospace<span class="cursor"></span></a>
+  <nav class="nav-links">
+    <a href="index.html">All tools</a>
+    <a href="devhub-about.html">About</a>
+    <a href="devhub-faq.html">FAQ</a>
+  <button id="themeToggle" class="theme-toggle" aria-label="Switch to dark theme">Dark</button>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <p class="eyebrow">Hash</p>
+    <h1>Hash Generator</h1>
+    <p class="lead">Type or paste text and get its SHA-1, SHA-256, SHA-384, and SHA-512 hashes instantly — computed locally with the browser's Web Crypto API.</p>
+  </section>
+
+  <div class="term-window">
+    <div class="term-bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="term-title">hash</span></div>
+    <div class="term-body">
+      <label class="field-label" for="hashInput">Text</label>
+      <textarea id="hashInput" spellcheck="false" placeholder="Type or paste text to hash"></textarea>
+
+      <div class="btn-row">
+        <button class="secondary" id="hashClearBtn">Clear</button>
+      </div>
+
+      <label class="field-label" style="margin-top:8px;">SHA-1</label>
+      <div class="output-box" id="hashOutputSHA1"></div>
+      <div class="btn-row"><button class="secondary" id="hashCopySHA1" data-target="hashOutputSHA1">Copy</button></div>
+
+      <label class="field-label">SHA-256</label>
+      <div class="output-box" id="hashOutputSHA256"></div>
+      <div class="btn-row"><button class="secondary" id="hashCopySHA256" data-target="hashOutputSHA256">Copy</button></div>
+
+      <label class="field-label">SHA-384</label>
+      <div class="output-box" id="hashOutputSHA384"></div>
+      <div class="btn-row"><button class="secondary" id="hashCopySHA384" data-target="hashOutputSHA384">Copy</button></div>
+
+      <label class="field-label">SHA-512</label>
+      <div class="output-box" id="hashOutputSHA512"></div>
+      <div class="btn-row"><button class="secondary" id="hashCopySHA512" data-target="hashOutputSHA512">Copy</button></div>
+    </div>
+  </div>
+
+  <p class="tool-note">Hashing happens entirely in your browser via the Web Crypto API — nothing you type is sent anywhere. MD5 is deliberately not offered, since browsers don't expose it natively and it's no longer considered secure.</p>
+</main>
+
+<footer>
+<p class="network-links">More free tools from us: <a href="https://usequietzone.com">Quiet Zone</a> · <a href="https://quantizeapp.com">Quantize</a> · <a href="https://quickconverta.com">QuickConverta</a></p>
+  <div class="foot-inner">
+    <nav>
+      <a href="devhub-about.html">About</a>
+      <a href="devhub-faq.html">FAQ</a>
+      <a href="devhub-contact.html">Contact</a>
+      <a href="devhub-terms.html">Terms</a>
+      <a href="devhub-privacy.html">Privacy</a>
+  </nav>
+    <p>© 2026 monospace</p>
+  </div>
+</footer>
+
+<script src="devhub-app.js"></script>
+<script src="devhub-theme.js"></script>
+</body>
+</html>

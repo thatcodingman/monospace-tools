@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="index, follow">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QHNBY3GR6L"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-QHNBY3GR6L');
+</script>
+<script>
+(function(){
+  try {
+    var saved = localStorage.getItem("monospace-theme");
+    var theme = saved || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+    document.documentElement.setAttribute("data-theme", theme);
+  } catch (e) {}
+})();
+</script>
+<title>URL Encoder / Decoder — monospace</title>
+<meta name="description" content="Encode or decode URL components and query strings instantly. Runs entirely in your browser.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://monospace.tools/devhub-url.html">
+<meta property="og:title" content="URL Encoder / Decoder — monospace">
+<meta property="og:description" content="Encode or decode URL components and query strings instantly. Runs entirely in your browser.">
+<meta property="og:image" content="https://monospace.tools/devhub-og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://monospace.tools/devhub-url.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Source+Sans+3:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="devhub-styles.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "URL Encoder / Decoder",
+  "url": "https://monospace.tools/devhub-url.html",
+  "applicationCategory": "DeveloperApplication",
+  "operatingSystem": "Any (runs in browser)",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+  "description": "Encode or decode URL components and query strings, entirely in your browser."
+}
+</script>
+</head>
+<body>
+
+<header class="nav">
+  <a href="index.html" class="wordmark">monospace<span class="cursor"></span></a>
+  <nav class="nav-links">
+    <a href="index.html">All tools</a>
+    <a href="devhub-about.html">About</a>
+    <a href="devhub-faq.html">FAQ</a>
+  <button id="themeToggle" class="theme-toggle" aria-label="Switch to dark theme">Dark</button>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <p class="eyebrow">URL</p>
+    <h1>URL Encode / Decode</h1>
+    <p class="lead">Encode a string for safe use in a URL, or decode a URL-encoded string back to plain text — instantly, in your browser.</p>
+  </section>
+
+  <div class="term-window">
+    <div class="term-bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="term-title">url</span></div>
+    <div class="term-body">
+      <label class="field-label" for="urlInput">Input</label>
+      <textarea id="urlInput" spellcheck="false" placeholder="https://example.com/search?q=hello world"></textarea>
+
+      <div class="btn-row">
+        <button class="primary" id="urlEncodeBtn">Encode</button>
+        <button class="primary" id="urlDecodeBtn">Decode</button>
+      </div>
+
+      <div class="status-row" id="urlStatus"></div>
+
+      <label class="field-label">Output</label>
+      <div class="output-box" id="urlOutput"></div>
+      <div class="btn-row">
+        <button class="secondary" id="urlCopyBtn">Copy</button>
+        <button class="secondary" id="urlClearBtn">Clear</button>
+      </div>
+    </div>
+  </div>
+
+  <p class="tool-note">Nothing you type here is uploaded — encoding and decoding happen entirely in your browser.</p>
+</main>
+
+<footer>
+<p class="network-links">More free tools from us: <a href="https://usequietzone.com">Quiet Zone</a> · <a href="https://quantizeapp.com">Quantize</a> · <a href="https://quickconverta.com">QuickConverta</a></p>
+  <div class="foot-inner">
+    <nav>
+      <a href="devhub-about.html">About</a>
+      <a href="devhub-faq.html">FAQ</a>
+      <a href="devhub-contact.html">Contact</a>
+      <a href="devhub-terms.html">Terms</a>
+      <a href="devhub-privacy.html">Privacy</a>
+  </nav>
+    <p>© 2026 monospace</p>
+  </div>
+</footer>
+
+<script src="devhub-app.js"></script>
+<script src="devhub-theme.js"></script>
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="index, follow">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QHNBY3GR6L"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-QHNBY3GR6L');
+</script>
+<script>
+(function(){
+  try {
+    var saved = localStorage.getItem("monospace-theme");
+    var theme = saved || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+    document.documentElement.setAttribute("data-theme", theme);
+  } catch (e) {}
+})();
+</script>
+<title>Cron Expression Explainer — monospace</title>
+<meta name="description" content="Translate a 5-field cron expression into a plain-English schedule. Runs entirely in your browser.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://monospace.tools/devhub-cron.html">
+<meta property="og:title" content="Cron Expression Explainer — monospace">
+<meta property="og:description" content="Translate a 5-field cron expression into a plain-English schedule. Runs entirely in your browser.">
+<meta property="og:image" content="https://monospace.tools/devhub-og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://monospace.tools/devhub-cron.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Source+Sans+3:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="devhub-styles.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Cron Expression Explainer",
+  "url": "https://monospace.tools/devhub-cron.html",
+  "applicationCategory": "DeveloperApplication",
+  "operatingSystem": "Any (runs in browser)",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+  "description": "Translate a 5-field cron expression into a plain-English schedule, entirely in your browser."
+}
+</script>
+</head>
+<body>
+
+<header class="nav">
+  <a href="index.html" class="wordmark">monospace<span class="cursor"></span></a>
+  <nav class="nav-links">
+    <a href="index.html">All tools</a>
+    <a href="devhub-about.html">About</a>
+    <a href="devhub-faq.html">FAQ</a>
+  <button id="themeToggle" class="theme-toggle" aria-label="Switch to dark theme">Dark</button>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <p class="eyebrow">Cron</p>
+    <h1>Cron Expression Explainer</h1>
+    <p class="lead">Paste a standard 5-field cron expression and get a plain-English description of when it runs.</p>
+  </section>
+
+  <div class="term-window">
+    <div class="term-bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="term-title">cron</span></div>
+    <div class="term-body">
+      <label class="field-label" for="cronInput">Cron expression</label>
+      <input type="text" id="cronInput" spellcheck="false" placeholder="0 9 * * 1-5" value="0 9 * * 1-5">
+
+      <div class="btn-row">
+        <button class="primary" id="cronExplainBtn">Explain</button>
+      </div>
+
+      <div class="status-row" id="cronStatus"></div>
+
+      <label class="field-label">Plain English</label>
+      <div class="output-box" id="cronOutput"></div>
+
+      <p class="tool-note" style="margin-top:14px;">Fields, left to right: minute (0-59), hour (0-23), day of month (1-31), month (1-12), day of week (0-6, Sunday = 0 or 7). Use <code>*</code> for "every," commas for lists, hyphens for ranges, and <code>/</code> for step values (e.g. <code>*/15</code>).</p>
+    </div>
+  </div>
+
+  <p class="tool-note">Parsing happens entirely in your browser — nothing is sent anywhere.</p>
+</main>
+
+<footer>
+<p class="network-links">More free tools from us: <a href="https://usequietzone.com">Quiet Zone</a> · <a href="https://quantizeapp.com">Quantize</a> · <a href="https://quickconverta.com">QuickConverta</a></p>
+  <div class="foot-inner">
+    <nav>
+      <a href="devhub-about.html">About</a>
+      <a href="devhub-faq.html">FAQ</a>
+      <a href="devhub-contact.html">Contact</a>
+      <a href="devhub-terms.html">Terms</a>
+      <a href="devhub-privacy.html">Privacy</a>
+  </nav>
+    <p>© 2026 monospace</p>
+  </div>
+</footer>
+
+<script src="devhub-app.js"></script>
+<script src="devhub-theme.js"></script>
+</body>
+</html>

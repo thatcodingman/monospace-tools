@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="index, follow">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QHNBY3GR6L"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-QHNBY3GR6L');
+</script>
+<script>
+(function(){
+  try {
+    var saved = localStorage.getItem("monospace-theme");
+    var theme = saved || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+    document.documentElement.setAttribute("data-theme", theme);
+  } catch (e) {}
+})();
+</script>
+<title>Lorem Ipsum Generator — monospace</title>
+<meta name="description" content="Generate placeholder Lorem Ipsum text by paragraphs, sentences, or words. Runs entirely in your browser.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://monospace.tools/devhub-lorem.html">
+<meta property="og:title" content="Lorem Ipsum Generator — monospace">
+<meta property="og:description" content="Generate placeholder Lorem Ipsum text by paragraphs, sentences, or words. Runs entirely in your browser.">
+<meta property="og:image" content="https://monospace.tools/devhub-og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://monospace.tools/devhub-lorem.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Source+Sans+3:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="devhub-styles.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Lorem Ipsum Generator",
+  "url": "https://monospace.tools/devhub-lorem.html",
+  "applicationCategory": "DeveloperApplication",
+  "operatingSystem": "Any (runs in browser)",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+  "description": "Generate placeholder Lorem Ipsum text by paragraphs, sentences, or words, entirely in your browser."
+}
+</script>
+</head>
+<body>
+
+<header class="nav">
+  <a href="index.html" class="wordmark">monospace<span class="cursor"></span></a>
+  <nav class="nav-links">
+    <a href="index.html">All tools</a>
+    <a href="devhub-about.html">About</a>
+    <a href="devhub-faq.html">FAQ</a>
+  <button id="themeToggle" class="theme-toggle" aria-label="Switch to dark theme">Dark</button>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <p class="eyebrow">Lorem Ipsum</p>
+    <h1>Lorem Ipsum Generator</h1>
+    <p class="lead">Generate placeholder text by paragraphs, sentences, or words — useful for mockups, layouts, and testing copy length.</p>
+  </section>
+
+  <div class="term-window">
+    <div class="term-bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="term-title">lorem</span></div>
+    <div class="term-body">
+      <div class="field-row">
+        <div style="width:120px;">
+          <label class="field-label" for="loremCount">Count</label>
+          <input type="number" id="loremCount" min="1" max="50" value="3">
+        </div>
+        <div style="min-width:160px;">
+          <label class="field-label" for="loremUnit">Unit</label>
+          <select id="loremUnit">
+            <option value="paragraphs" selected>Paragraphs</option>
+            <option value="sentences">Sentences</option>
+            <option value="words">Words</option>
+          </select>
+        </div>
+        <div class="check-row">
+          <input type="checkbox" id="loremStartClassic" checked>
+          <label for="loremStartClassic">Start with "Lorem ipsum dolor sit amet"</label>
+        </div>
+      </div>
+
+      <div class="btn-row">
+        <button class="primary" id="loremGenerateBtn">Generate</button>
+        <button class="secondary" id="loremCopyBtn">Copy</button>
+      </div>
+
+      <label class="field-label">Output</label>
+      <div class="output-box" id="loremOutput"></div>
+    </div>
+  </div>
+
+  <p class="tool-note">Generated locally in your browser — nothing is sent anywhere.</p>
+</main>
+
+<footer>
+<p class="network-links">More free tools from us: <a href="https://usequietzone.com">Quiet Zone</a> · <a href="https://quantizeapp.com">Quantize</a> · <a href="https://quickconverta.com">QuickConverta</a></p>
+  <div class="foot-inner">
+    <nav>
+      <a href="devhub-about.html">About</a>
+      <a href="devhub-faq.html">FAQ</a>
+      <a href="devhub-contact.html">Contact</a>
+      <a href="devhub-terms.html">Terms</a>
+      <a href="devhub-privacy.html">Privacy</a>
+  </nav>
+    <p>© 2026 monospace</p>
+  </div>
+</footer>
+
+<script src="devhub-app.js"></script>
+<script src="devhub-theme.js"></script>
+</body>
+</html>
